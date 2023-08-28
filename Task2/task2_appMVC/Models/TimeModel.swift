@@ -7,23 +7,10 @@
 
 import Foundation
 
-struct TimeModel: Codable{
+struct TimeModel: Codable {
     var hours: Int?
     var minutes: Int?
 }
 
-extension TimeModel {
-    init(_ time: TimeModel) {
-        var hour = time.hours
-        var minutes = time.minutes
-    }
-}
 
-extension TimeModel {
-    mutating func setTime(time: TimeModel) {
-        hours = time.hours
-        minutes = time.minutes
-        
-        print(TimeModel())
-    }
-}
+

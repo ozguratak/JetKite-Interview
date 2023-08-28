@@ -8,30 +8,38 @@
 import UIKit
 
 class ViewController: UIViewController, LocalServiceProtocol {
+    func alarmDismissedFromNotification() {
+        NotificationViewController.alarmDismissed(page: self)
+    }
+    func alarmDidSaved() {
+        NotificationViewController.alert(alertInfo: "Alert has setted for \(vm.calculateAlarmTime()) minutes", page: self)
+    }
+    
     let hours = Array(0...23)
     let minutes = Array(0...59)
-    private var model = TimeModel()
+    private var vm = TimeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         setupUI()
     }
-    
-    func alarmDidSaved() {
-        NotificationViewController.alert(alertInfo: "Alarm setted succesfully", page: self)
-    }
-    
+   
     @objc func setAlarm(){
-        LocalService.scheduleAlarm(timeModel: model)
+        vm.setTimer() 
         alarmDidSaved()
     }
 
     func setupUI() {
+        let header = UILabel()
+        header.text = "Set Alarm Time"
+        header.textColor = UIColor.black
+        header.textAlignment = .center
+        
         let timePicker = UIPickerView()
         timePicker.translatesAutoresizingMaskIntoConstraints = false
-        timePicker.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        timePicker.showsLargeContentViewer = true
+        timePicker.widthAnchor.constraint(equalToConstant: 150).isActive = true
         timePicker.heightAnchor.constraint(equalToConstant: 160).isActive = true
         timePicker.dataSource = self
         timePicker.delegate = self
@@ -41,26 +49,28 @@ class ViewController: UIViewController, LocalServiceProtocol {
         button.setTitle("Set Alarm", for: .normal)
         button.addTarget(self, action: #selector(setAlarm), for: .touchUpInside)
         button.layer.cornerRadius = 8
-        button.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 150).isActive = true
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-        let stackView = UIStackView(arrangedSubviews: [timePicker, button])
+        let stackView = UIStackView(arrangedSubviews: [header, timePicker, button])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.spacing = 12
+        stackView.spacing = 20
         stackView.distribution = .fillEqually
         
         self.view.addSubview(stackView)
         
         stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        stackView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        stackView.widthAnchor.constraint(equalToConstant: 300).isActive = true
     }
-
 }
 
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-   
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 40
+    }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
@@ -83,9 +93,8 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.model.hours = hours[pickerView.selectedRow(inComponent: 0)]
-        self.model.minutes = minutes[pickerView.selectedRow(inComponent: 1)]
-        
+        self.vm.model.hours = hours[pickerView.selectedRow(inComponent: 0)]
+        self.vm.model.minutes = minutes[pickerView.selectedRow(inComponent: 1)]
     }
 }
 

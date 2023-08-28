@@ -17,9 +17,9 @@
 		E0EF0D6A2A9C87E7003297C9 /* task2_appMVCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0D692A9C87E7003297C9 /* task2_appMVCUITests.swift */; };
 		E0EF0D6C2A9C87E7003297C9 /* task2_appMVCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0D6B2A9C87E7003297C9 /* task2_appMVCUITestsLaunchTests.swift */; };
 		E0EF0D7C2A9C88A9003297C9 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0D7B2A9C88A9003297C9 /* TimeModel.swift */; };
-		E0EF0D7E2A9C8A28003297C9 /* InformationMessageControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0D7D2A9C8A28003297C9 /* InformationMessageControllers.swift */; };
 		E0EF0D802A9C8A49003297C9 /* LocalAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0D7F2A9C8A49003297C9 /* LocalAPIService.swift */; };
 		E0EF0D832A9C9AF7003297C9 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0D822A9C9AF7003297C9 /* NotificationViewController.swift */; };
+		E0EF0D892A9CCD4C003297C9 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0D882A9CCD4C003297C9 /* TimeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,10 +54,10 @@
 		E0EF0D692A9C87E7003297C9 /* task2_appMVCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task2_appMVCUITests.swift; sourceTree = "<group>"; };
 		E0EF0D6B2A9C87E7003297C9 /* task2_appMVCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task2_appMVCUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E0EF0D7B2A9C88A9003297C9 /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
-		E0EF0D7D2A9C8A28003297C9 /* InformationMessageControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessageControllers.swift; sourceTree = "<group>"; };
 		E0EF0D7F2A9C8A49003297C9 /* LocalAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPIService.swift; sourceTree = "<group>"; };
 		E0EF0D812A9C8BE7003297C9 /* task2_appMVC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = task2_appMVC.entitlements; sourceTree = "<group>"; };
 		E0EF0D822A9C9AF7003297C9 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		E0EF0D882A9CCD4C003297C9 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +108,7 @@
 		E0EF0D472A9C87E5003297C9 /* task2_appMVC */ = {
 			isa = PBXGroup;
 			children = (
+				E0EF0D872A9CCD3A003297C9 /* ViewModels */,
 				E0EF0D812A9C8BE7003297C9 /* task2_appMVC.entitlements */,
 				E0EF0D7A2A9C881F003297C9 /* Services */,
 				E0EF0D792A9C8818003297C9 /* Controllers */,
@@ -151,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				E0EF0D4C2A9C87E5003297C9 /* ViewController.swift */,
-				E0EF0D7D2A9C8A28003297C9 /* InformationMessageControllers.swift */,
 				E0EF0D822A9C9AF7003297C9 /* NotificationViewController.swift */,
 			);
 			path = Controllers;
@@ -163,6 +163,14 @@
 				E0EF0D7F2A9C8A49003297C9 /* LocalAPIService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E0EF0D872A9CCD3A003297C9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0EF0D882A9CCD4C003297C9 /* TimeViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,8 +306,8 @@
 			files = (
 				E0EF0D802A9C8A49003297C9 /* LocalAPIService.swift in Sources */,
 				E0EF0D4D2A9C87E5003297C9 /* ViewController.swift in Sources */,
-				E0EF0D7E2A9C8A28003297C9 /* InformationMessageControllers.swift in Sources */,
 				E0EF0D832A9C9AF7003297C9 /* NotificationViewController.swift in Sources */,
+				E0EF0D892A9CCD4C003297C9 /* TimeViewModel.swift in Sources */,
 				E0EF0D492A9C87E5003297C9 /* AppDelegate.swift in Sources */,
 				E0EF0D7C2A9C88A9003297C9 /* TimeModel.swift in Sources */,
 				E0EF0D4B2A9C87E5003297C9 /* SceneDelegate.swift in Sources */,
