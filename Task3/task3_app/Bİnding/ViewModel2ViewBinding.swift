@@ -36,3 +36,34 @@ class BindingTextField: UITextField{
         }
     }
 }
+
+class BindingPickerView: UIPickerView{
+    
+    var textChanged: (Any) -> Void = { _ in }
+    
+    override init(frame: CGRect){
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+    
+    private func commonInit() {
+        target(forAction: #selector(pickerViewDidChange), withSender: self)
+    }
+    
+    func bind(callback: @escaping (Any) -> Void) {
+        textChanged = callback
+    }
+    
+    @objc func pickerViewDidChange(_ pickerView: UIPickerView, componentValue: Int) {
+        let component = componentValue
+        let selectedRow = pickerView.selectedRow(inComponent: component)
+        textChanged(selectedRow)
+    }
+}
+
+

@@ -6,11 +6,26 @@
 //
 
 import Foundation
-struct TimeViewModel {
-    var minutes = Dynamic(0)
-    var seconds = Dynamic(0)
+class TimeViewModel {
+    var counterSeconds = Dynamic("")
     
-    func time() -> Dynamic<String> {
-        return Dynamic(String(describing: minutes) + " : " + String(describing: seconds))
+    func startCountdown(seconds: Int, updateHandler: @escaping (Int) -> Void, completion: @escaping () -> Void) {
+        var remainingTime = seconds
+        
+        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            updateHandler(remainingTime)
+            
+            if remainingTime > 0 {
+                remainingTime -= 1
+            } else {
+                timer.invalidate()
+                completion()
+            }
+        }
+        
+        // Timer'ı çalıştır
+        timer.fire()
     }
+
+
 }

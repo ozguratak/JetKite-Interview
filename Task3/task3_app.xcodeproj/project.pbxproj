@@ -16,7 +16,6 @@
 		E0EF0DAE2A9DC559003297C9 /* task3_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0DAD2A9DC559003297C9 /* task3_appTests.swift */; };
 		E0EF0DB82A9DC559003297C9 /* task3_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0DB72A9DC559003297C9 /* task3_appUITests.swift */; };
 		E0EF0DBA2A9DC559003297C9 /* task3_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0DB92A9DC559003297C9 /* task3_appUITestsLaunchTests.swift */; };
-		E0EF0E0C2A9DFED7003297C9 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0E0B2A9DFED7003297C9 /* TimeModel.swift */; };
 		E0EF0E0E2A9DFEF7003297C9 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0E0D2A9DFEF7003297C9 /* TimeViewModel.swift */; };
 		E0EF0E102A9DFF32003297C9 /* ViewModel2ViewBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0E0F2A9DFF32003297C9 /* ViewModel2ViewBinding.swift */; };
 		E0EF0E122A9DFF57003297C9 /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0E112A9DFF57003297C9 /* Listener.swift */; };
@@ -53,7 +52,6 @@
 		E0EF0DB32A9DC559003297C9 /* task3_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = task3_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EF0DB72A9DC559003297C9 /* task3_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task3_appUITests.swift; sourceTree = "<group>"; };
 		E0EF0DB92A9DC559003297C9 /* task3_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task3_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E0EF0E0B2A9DFED7003297C9 /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
 		E0EF0E0D2A9DFEF7003297C9 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		E0EF0E0F2A9DFF32003297C9 /* ViewModel2ViewBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel2ViewBinding.swift; sourceTree = "<group>"; };
 		E0EF0E112A9DFF57003297C9 /* Listener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listener.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				E0EF0E092A9DFE7D003297C9 /* Binding */,
 				E0EF0E082A9DFE77003297C9 /* ViewModels */,
 				E0EF0E0A2A9DFE83003297C9 /* ViewControllers */,
-				E0EF0E072A9DFE6B003297C9 /* Models */,
 				E0EF0D962A9DC558003297C9 /* AppDelegate.swift */,
 				E0EF0D982A9DC558003297C9 /* SceneDelegate.swift */,
 				E0EF0D9C2A9DC558003297C9 /* Main.storyboard */,
@@ -136,14 +133,6 @@
 				E0EF0DB92A9DC559003297C9 /* task3_appUITestsLaunchTests.swift */,
 			);
 			path = task3_appUITests;
-			sourceTree = "<group>";
-		};
-		E0EF0E072A9DFE6B003297C9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				E0EF0E0B2A9DFED7003297C9 /* TimeModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		E0EF0E082A9DFE77003297C9 /* ViewModels */ = {
@@ -308,7 +297,6 @@
 				E0EF0E102A9DFF32003297C9 /* ViewModel2ViewBinding.swift in Sources */,
 				E0EF0D972A9DC558003297C9 /* AppDelegate.swift in Sources */,
 				E0EF0E122A9DFF57003297C9 /* Listener.swift in Sources */,
-				E0EF0E0C2A9DFED7003297C9 /* TimeModel.swift in Sources */,
 				E0EF0D992A9DC558003297C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
