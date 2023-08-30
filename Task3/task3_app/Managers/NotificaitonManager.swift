@@ -10,7 +10,7 @@ import UserNotifications
 
 protocol NotificationManagerProtocol {
     func alarmDidSaved()
-    func removeNotification()
+    func removeAlarm()
 }
 
 class NotificationManager: UNUserNotificationCenter, UNUserNotificationCenterDelegate {

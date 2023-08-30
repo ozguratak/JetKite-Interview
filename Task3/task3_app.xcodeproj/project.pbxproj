@@ -20,7 +20,8 @@
 		E0EF0E102A9DFF32003297C9 /* ViewModel2ViewBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0E0F2A9DFF32003297C9 /* ViewModel2ViewBinding.swift */; };
 		E0EF0E122A9DFF57003297C9 /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0E112A9DFF57003297C9 /* Listener.swift */; };
 		E0EF0E152A9F64FB003297C9 /* NotificaitonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0E142A9F64FB003297C9 /* NotificaitonManager.swift */; };
-		E0EF0E182A9F66D7003297C9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0E172A9F66D7003297C9 /* NotificationController.swift */; };
+		E0EF0E182A9F66D7003297C9 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0E172A9F66D7003297C9 /* NotificationViewController.swift */; };
+		E0EF0E1A2A9F7381003297C9 /* CounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF0E192A9F7381003297C9 /* CounterManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,8 @@
 		E0EF0E0F2A9DFF32003297C9 /* ViewModel2ViewBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel2ViewBinding.swift; sourceTree = "<group>"; };
 		E0EF0E112A9DFF57003297C9 /* Listener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listener.swift; sourceTree = "<group>"; };
 		E0EF0E142A9F64FB003297C9 /* NotificaitonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificaitonManager.swift; sourceTree = "<group>"; };
-		E0EF0E172A9F66D7003297C9 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		E0EF0E172A9F66D7003297C9 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		E0EF0E192A9F7381003297C9 /* CounterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,8 +163,8 @@
 		E0EF0E0A2A9DFE83003297C9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E0EF0E172A9F66D7003297C9 /* NotificationViewController.swift */,
 				E0EF0D9A2A9DC558003297C9 /* ViewController.swift */,
-				E0EF0E172A9F66D7003297C9 /* NotificationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				E0EF0E142A9F64FB003297C9 /* NotificaitonManager.swift */,
+				E0EF0E192A9F7381003297C9 /* CounterManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -307,8 +310,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0EF0D9B2A9DC558003297C9 /* ViewController.swift in Sources */,
+				E0EF0E1A2A9F7381003297C9 /* CounterManager.swift in Sources */,
 				E0EF0E0E2A9DFEF7003297C9 /* TimeViewModel.swift in Sources */,
-				E0EF0E182A9F66D7003297C9 /* NotificationController.swift in Sources */,
+				E0EF0E182A9F66D7003297C9 /* NotificationViewController.swift in Sources */,
 				E0EF0E152A9F64FB003297C9 /* NotificaitonManager.swift in Sources */,
 				E0EF0E102A9DFF32003297C9 /* ViewModel2ViewBinding.swift in Sources */,
 				E0EF0D972A9DC558003297C9 /* AppDelegate.swift in Sources */,

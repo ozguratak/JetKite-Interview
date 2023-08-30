@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     private let pickerViewData = Array(0...59)
     private var timeVM = TimeViewModel()
+    private let counter = CounterManager()
     let timePickerView = UIPickerView()
     let startButton = UIButton()
     
@@ -30,42 +31,44 @@ class ViewController: UIViewController {
         timeVM.counterSeconds.bind { text in
             self.timeTextField.text = text
         }
-        
         setupUI()
     }
     
- 
+    
     
     @objc func startButtonAction() {
         switch startButton.title(for: .normal) {
         case "Pause":
-            timeVM.countdown(state: .pause) { remainingTime in
-                self.timeTextField.text = "Paused at \(remainingTime)"
-                self.startButton.backgroundColor = UIColor.systemGreen
-                self.startButton.setTitle("Resume", for: .normal)
-            } completion: {
-                self.startButton.backgroundColor = UIColor.systemGreen
-                self.startButton.setTitle("Resume", for: .normal)
+            DispatchQueue.main.async {
+                self.counter.countdown(timeModel: self.timeVM, state: .pause) { remainingTime in
+                    self.timeTextField.text = "Paused at \(remainingTime)"
+                    self.startButton.backgroundColor = UIColor.systemGreen
+                    self.startButton.setTitle("Resume", for: .normal)
+                } completion: {
+                    self.startButton.backgroundColor = UIColor.systemGreen
+                    self.startButton.setTitle("Resume", for: .normal)
+                }
             }
         default:
-            timeVM.countdown(state: .start) { secondsRemaining in
-                self.timeTextField.text = "\(secondsRemaining)"
-                self.startButton.backgroundColor = UIColor.systemRed
-                self.startButton.setTitle("Pause", for: .normal)
-            } completion: {
-                self.timeTextField.text = "Counter Finished!"
-                self.startButton.backgroundColor = UIColor.systemGreen
-                self.startButton.setTitle("Start", for: .normal)
-                self.timePickerView.selectRow(0, inComponent: 0, animated: true)
-                self.timePickerView.selectRow(0, inComponent: 1, animated: true)
+            DispatchQueue.main.async {
+                self.counter.countdown(timeModel: self.timeVM, state: .start) { secondsRemaining in
+                    self.timeTextField.text = "\(secondsRemaining)"
+                    self.startButton.backgroundColor = UIColor.systemRed
+                    self.startButton.setTitle("Pause", for: .normal)
+                } completion: {
+                    self.timeTextField.text = "Counter Finished!"
+                    self.startButton.backgroundColor = UIColor.systemGreen
+                    self.startButton.setTitle("Start", for: .normal)
+                    self.timePickerView.selectRow(0, inComponent: 0, animated: true)
+                    self.timePickerView.selectRow(0, inComponent: 1, animated: true)
+                }
             }
         }
     }
     
     @objc func resetButtonAction() {
         DispatchQueue.main.async {
-            self.timeVM.countdown(state: .reset) { remainingTime in
-               
+            self.counter.countdown(timeModel: self.timeVM, state: .reset) { remainingTime in
             } completion: {
                 self.timeTextField.text = "Counter Reset"
                 self.startButton.backgroundColor = UIColor.systemGreen
@@ -111,7 +114,7 @@ class ViewController: UIViewController {
         resetButton.layer.cornerRadius = 12
         resetButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
         resetButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-   
+        
         resetButton.addTarget(self, action: #selector(resetButtonAction), for: .touchUpInside)
         
         let stackView = UIStackView(arrangedSubviews: [headersStackView, timePickerView, self.timeTextField, startButton, resetButton])
@@ -136,16 +139,16 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
-
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerViewData.count
     }
-
+    
     // UIPickerViewDelegate protokolünün gerektirdiği yöntemler
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(pickerViewData[row])"
     }
-
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.timeTextField.text = String(describing:(pickerViewData[pickerView.selectedRow(inComponent: 0)] * 60) + (pickerViewData[pickerView.selectedRow(inComponent: 1)]))
         self.timeVM.counterSeconds.value = String(describing:(pickerViewData[pickerView.selectedRow(inComponent: 0)] * 60) + (pickerViewData[pickerView.selectedRow(inComponent: 1)]))
