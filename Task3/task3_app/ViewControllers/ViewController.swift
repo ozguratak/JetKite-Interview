@@ -34,6 +34,8 @@ class ViewController: UIViewController {
         setupUI()
     }
     
+ 
+    
     @objc func startButtonAction() {
         switch startButton.title(for: .normal) {
         case "Pause":
@@ -51,6 +53,11 @@ class ViewController: UIViewController {
                 self.startButton.backgroundColor = UIColor.systemRed
                 self.startButton.setTitle("Pause", for: .normal)
             } completion: {
+                self.timeTextField.text = "Counter Finished!"
+                self.startButton.backgroundColor = UIColor.systemGreen
+                self.startButton.setTitle("Start", for: .normal)
+                self.timePickerView.selectRow(0, inComponent: 0, animated: true)
+                self.timePickerView.selectRow(0, inComponent: 1, animated: true)
             }
         }
     }
@@ -58,10 +65,11 @@ class ViewController: UIViewController {
     @objc func resetButtonAction() {
         DispatchQueue.main.async {
             self.timeVM.countdown(state: .reset) { remainingTime in
+               
+            } completion: {
                 self.timeTextField.text = "Counter Reset"
                 self.startButton.backgroundColor = UIColor.systemGreen
                 self.startButton.setTitle("Start", for: .normal)
-            } completion: {
                 self.timePickerView.selectRow(0, inComponent: 0, animated: true)
                 self.timePickerView.selectRow(0, inComponent: 1, animated: true)
             }
