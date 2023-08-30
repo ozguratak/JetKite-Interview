@@ -33,8 +33,6 @@ class TimeViewModel {
                     fatalError("Timer was not found!")
                 }
             case .pause:
-                // Eğer pause işlemi yapılıyorsa, remainingTime değerini güncelleyin.
-                
                 if let remaining = Int(self.counterSeconds.value) {
                     self.counterRemaining = remaining
                     self.counterSeconds.value = String(describing: remaining)
@@ -44,7 +42,6 @@ class TimeViewModel {
                 }
             case .reset:
                 timer?.invalidate()
-                // Reset işlemi yapıldığında counterSeconds ve counterRemaining değerlerini sıfırlayın.
                 self.counterSeconds.value = "0"
                 self.counterRemaining = nil
                 completion()

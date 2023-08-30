@@ -51,12 +51,8 @@ class ViewController: UIViewController {
                 self.startButton.backgroundColor = UIColor.systemRed
                 self.startButton.setTitle("Pause", for: .normal)
             } completion: {
-                self.timeTextField.text = "Timer has elapsed!"
-                self.startButton.setTitle("Start", for: .normal)
-                self.startButton.backgroundColor = UIColor.systemGreen
             }
         }
-
     }
     
     @objc func resetButtonAction() {
@@ -66,8 +62,8 @@ class ViewController: UIViewController {
                 self.startButton.backgroundColor = UIColor.systemGreen
                 self.startButton.setTitle("Start", for: .normal)
             } completion: {
-                self.startButton.backgroundColor = UIColor.systemGreen
-                self.startButton.setTitle("Start", for: .normal)
+                self.timePickerView.selectRow(0, inComponent: 0, animated: true)
+                self.timePickerView.selectRow(0, inComponent: 1, animated: true)
             }
         }
     }
