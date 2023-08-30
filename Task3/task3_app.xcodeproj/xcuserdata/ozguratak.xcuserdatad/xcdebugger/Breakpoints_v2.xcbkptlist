@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C5A9D54F-8BC0-416A-8454-D4A62FDC53D1"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "769F4F8E-7DC9-4998-9A06-3F4F45E43193"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "task3_app/ViewControllers/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "startButtonAction()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6B347A79-1DB0-4194-9198-F0889B302D05"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "task3_app/ViewModels/TimeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "countdown(state:updateHandler:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6B347A79-1DB0-4194-9198-F0889B302D05 - 3cf9340f13e847c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "task3_app.TimeViewModel.countdown(state: task3_app.TimerState, updateHandler: (Swift.Int) -&gt; (), completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "task3_app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ozguratak/Desktop/Personal%20Projects/Interview-Cases/Jetkins_Case/task3_app/task3_app/ViewModels/TimeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "716">
+               </Location>
+               <Location
+                  uuid = "6B347A79-1DB0-4194-9198-F0889B302D05 - 3cf9340f13e847c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "task3_app.TimeViewModel.countdown(state: task3_app.TimerState, updateHandler: (Swift.Int) -&gt; (), completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "task3_app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ozguratak/Desktop/Personal%20Projects/Interview-Cases/Jetkins_Case/task3_app/task3_app/ViewModels/TimeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "840">
+               </Location>
+               <Location
+                  uuid = "6B347A79-1DB0-4194-9198-F0889B302D05 - 3cf9340f13e8473d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "task3_app.TimeViewModel.countdown(state: task3_app.TimerState, updateHandler: (Swift.Int) -&gt; (), completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "task3_app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ozguratak/Desktop/Personal%20Projects/Interview-Cases/Jetkins_Case/task3_app/task3_app/ViewModels/TimeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1008">
+               </Location>
+               <Location
+                  uuid = "6B347A79-1DB0-4194-9198-F0889B302D05 - 3cf9340f13e8473d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "task3_app.TimeViewModel.countdown(state: task3_app.TimerState, updateHandler: (Swift.Int) -&gt; (), completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "task3_app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ozguratak/Desktop/Personal%20Projects/Interview-Cases/Jetkins_Case/task3_app/task3_app/ViewModels/TimeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "973699C1-900C-4D5C-ACF9-5D413858A0C7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "task3_app/ViewModels/TimeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "countdown(state:updateHandler:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "973699C1-900C-4D5C-ACF9-5D413858A0C7 - 3cf9340f13e841f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "task3_app.TimeViewModel.countdown(state: task3_app.TimerState, updateHandler: (Swift.Int) -&gt; (), completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "task3_app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ozguratak/Desktop/Personal%20Projects/Interview-Cases/Jetkins_Case/task3_app/task3_app/ViewModels/TimeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "973699C1-900C-4D5C-ACF9-5D413858A0C7 - 3cf9340f13e841a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "task3_app.TimeViewModel.countdown(state: task3_app.TimerState, updateHandler: (Swift.Int) -&gt; (), completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "task3_app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ozguratak/Desktop/Personal%20Projects/Interview-Cases/Jetkins_Case/task3_app/task3_app/ViewModels/TimeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "312">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B1AD3EC-79C1-47E9-8E3C-194F0DBF4068"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "task3_app/ViewModels/TimeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "countdown(state:updateHandler:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7B1AD3EC-79C1-47E9-8E3C-194F0DBF4068 - 3cf9340f13e841f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "task3_app.TimeViewModel.countdown(state: task3_app.TimerState, updateHandler: (Swift.Int) -&gt; (), completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "task3_app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ozguratak/Desktop/Personal%20Projects/Interview-Cases/Jetkins_Case/task3_app/task3_app/ViewModels/TimeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "7B1AD3EC-79C1-47E9-8E3C-194F0DBF4068 - 3cf9340f13e841a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "task3_app.TimeViewModel.countdown(state: task3_app.TimerState, updateHandler: (Swift.Int) -&gt; (), completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "task3_app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ozguratak/Desktop/Personal%20Projects/Interview-Cases/Jetkins_Case/task3_app/task3_app/ViewModels/TimeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "312">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
